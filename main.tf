@@ -65,7 +65,7 @@ resource "aws_instance" "web" {
   }
 }
 
-output "public_ip" {
+output "public_ip" {{
   value = "${join(", ",aws_instance.web.*.public_ip)}"
 }
 
